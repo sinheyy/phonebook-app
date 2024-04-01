@@ -2,9 +2,10 @@ import React from 'react'
 import { Row, Col, Form, Button } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
 import { useState } from 'react'
+import { useEffect } from 'react'
 
 const SearchBox = () => {
-    const [searchName, setsearchName] = useState("");
+    const [searchName, setSearchName] = useState("");
     const dispatch = useDispatch();
 
     // 찾으려는 연락처 검색
@@ -17,10 +18,14 @@ const SearchBox = () => {
             searchContact();
     }
 
+    useEffect(() => {
+        searchContact();
+    }, [searchName]);
+
     return (
         <Row id="form">
             <Col lg={10}>
-                <Form.Control type="text" placeholder="이름을 입력해주세요" onChange={(event) => setsearchName(event.target.value)} onKeyPress={(event) => enter(event)} />
+                <Form.Control type="text" placeholder="이름을 입력해주세요" onChange={(event) => setSearchName(event.target.value)} onKeyPress={(event) => enter(event)} />
             </Col>
             <Col lg={2}>
                 <Button variant="none" onClick={searchContact}>

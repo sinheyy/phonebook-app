@@ -14,7 +14,7 @@ const ContactList = () => {
             setSearchList(contactList);
         }
         else {
-            let tempList = contactList.filter((item) => (item.name == searchName));
+            let tempList = contactList.filter((item) => (item.name.includes(searchName)));
             setSearchList(tempList);
         }
 
