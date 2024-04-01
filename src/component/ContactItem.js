@@ -18,10 +18,10 @@ const ContactItem = ({ item }) => {
                 <img width={50} src={"https://cdn-icons-png.flaticon.com/128/847/847969.png"} />
             </Col>
             <Col lg={11}>
-                <div>{item.name}</div>
+                <div id="name">{item.name}</div>
                 <div>{phoneFormat(item.phoneNumber)}</div>
                 <div>{item.email}</div>
-                <div>{item.memo}</div>
+                <div id="memo">{item.memo}</div>
             </Col>
         </Row>
     )

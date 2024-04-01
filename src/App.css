@@ -23,8 +23,6 @@
   
 }
 
-
-
 .title {
   text-align: center;
   font-family: 'GasoekOne-Regular';
@@ -50,10 +48,25 @@
 
 #contact-item{
   margin-top: 10px;
+  border-bottom: 1px solid black;
 }
 
 #contact-item img{
   border: 10px solid hsla(360, 100%, 100%, 0);
+}
+
+#name{
+  background-color: hsla(0, 0%, 100%, 0.5);
+  border-radius: 10px;
+  width: fit-content;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#memo{
+  color: #4f4f50;
+  width: fit-content;
+  font-size: 15px;
 }
 
 @font-face {
