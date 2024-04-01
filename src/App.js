@@ -11,8 +11,8 @@ import ContactList from './component/ContactList';
 // 4. 사용자가 유저를 이름 검색으로 찾을 수 있음
 function App() {
   return (
-    <div>
-      <h1 className='title'>연락처</h1>
+    <div className="main" >
+      <h1 className='title'>PHONE BOOK</h1>
       <Container>
         <Row>
           <Col>

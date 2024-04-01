@@ -1,9 +1,10 @@
 let initialState = {
-    contactList: []
+    contactList: [],
+    searchName: ""
 }
 
 function reducer(state = initialState, action) {
-    const {type, payload} = action
+    const { type, payload } = action
     switch (type) {
         case "ADD_CONTACT":
             return {
@@ -12,13 +13,17 @@ function reducer(state = initialState, action) {
                     ...state.contactList,
                     {
                         name: payload.name,
-                        phoneNumber: payload.phoneNumber
+                        phoneNumber: payload.phoneNumber,
+                        email: payload.email,
+                        memo: payload.memo
                     }
                 ]
             };
-            default:
-                return {...state};
-        }
+        case "SEARCH_CONTACT":
+            return { ...state, searchName: payload.searchName };
+        default:
+            return { ...state };
     }
+}
 
-    export default reducer
+export default reducer
